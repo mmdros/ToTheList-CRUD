@@ -11,7 +11,7 @@ const hourEl = document.getElementById("hour");
 
 const closeEl = document.getElementById("close");
 
-const key = "c9742d46ff424d849bfa19756194a886";
+const key = "1a0683af595f45e4aacfc770964de4b9";
 const urlApi = `https://crudcrud.com/api/${key}/tasks`;
 
 // check
@@ -143,7 +143,7 @@ function getTime() {
 
   fullDay.textContent = `${date.substring(0, 2)} ${
     months[monthtitle]
-  } ${date.substring(8, 10)}`;
+  } ${date.substring(6, 10)}`;
 
   hourEl.textContent = `${time}`;
   fullDay.style.color = "#bcd";
@@ -180,18 +180,21 @@ async function openModal(id) {
   inputEdit.value = tasks.task;
   overlay.classList.remove("hidden");
   modal.classList.remove("hidden");
+  
+  formEdit.addEventListener("submit", handleFormSubmit);
 
-  formEdit.addEventListener("submit", (e) => {
+  function handleFormSubmit(e) {
     e.preventDefault();
     const todoText = formEdit["input-edit"].value.trim();
+    alert(id);
 
-    formEdit.reset();
     if (todoText) {
       editTask(id, { task: todoText, time: getTime() });
+      formEdit.removeEventListener("submit", handleFormSubmit);
     } else {
       showMessage("message-edit", "Please enter some todo...");
     }
-  });
+  }
 }
 
 function close() {

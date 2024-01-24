@@ -1,6 +1,7 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
+<html lang="pt-BR">
+
+<head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -9,12 +10,13 @@
     <link rel="stylesheet" href="./css/bootstrap.min.css" />
     <!-- CSS -->
     <link rel="stylesheet" href="./css/style.css" />
-  </head>
-  <body>
+</head>
+
+<body>
     <header class="my-5 text-center">
         <h4 id="full-day">Day Month, Year</h4>
         <div class="time-container text-light">
-            <span id="hour">Hh</span>
+            <span id="hour"></span>
             :
             <span id="minute">Mm</span>
             :
@@ -29,20 +31,21 @@
         <!-- Form -->
         <form id="form-create" class="mb-3">
             <div class="mb-3">
-                <input type="text" class="mb-1 form-control" id="input-create" placeholder="type your toDos..." autocomplete="off">
-              <span id="message-create" class="text-danger"></span>
-              <button class="btn btn-outline-primary d-block ms-auto">Add</button>  
+                <input type="text" class="mb-1 form-control" id="input-create" placeholder="type your toDos..."
+                    autocomplete="off">
+                <span id="message-create" class="text-danger"></span>
+                <button class="btn btn-outline-primary d-block ms-auto">Add</button>
             </div>
         </form>
 
         <!-- Form ul -->
         <ul id="list-group-todo" class="list-group">
-            <li class="list-group-item d-flex justify-content-between">
-            <div class="todo-icons"><span class="opacity-50 me-2"></span>
-            <img src="./images/edit.svg" alt="edit icon" class="edit-icon" width="25" height="25">
-            <img src="./images/delete.svg" alt="delete icon" class="delete-icon" width="25" height="25">
-            </div>
-        </li>
+            <!--  <li class="list-group-item d-flex justify-content-between">
+                 <div class="todo-icons"><span class="opacity-50 me-2"></span>
+                    <img src="./images/edit.svg" alt="edit icon" class="edit-icon" width="25" height="25">
+                    <img src="./images/delete.svg" alt="delete icon" class="delete-icon" width="25" height="25">
+                </div> 
+            </li> -->
         </ul>
 
         <!-- Modal -->
@@ -55,7 +58,8 @@
                 <div class="card-body">
                     <form id="form-edit" class="mb-3">
                         <div class="mb-3">
-                            <input type="text" id="input-edit" class="mb-1 form-control" placeholder="type toDo..." autocomplete="off">
+                            <input type="text" id="input-edit" class="mb-1 form-control" placeholder="type toDo..."
+                                autocomplete="off">
                             <span id="message-edit" class="text-danger"></span>
                         </div>
                         <button class="btn btn-outline-success d-block ms-auto">Save Changes</button>
@@ -64,12 +68,13 @@
             </div>
         </div>
     </main>
-        <!-- Overlay -->
-     <div id="overlay" class="overlay hidden"></div>
-      
+    <!-- Overlay -->
+    <div id="overlay" class="overlay hidden"></div>
+
     <!-- Bootstrap JS -->
     <script src="./js/bootstrap.min.js"></script>
     <!-- JavaScript -->
     <script src="./js/app.js"></script>
-  </body>
+</body>
+
 </html>

@@ -186,7 +186,6 @@ async function openModal(id) {
   function handleFormSubmit(e) {
     e.preventDefault();
     const todoText = formEdit["input-edit"].value.trim();
-    alert(id);
 
     if (todoText) {
       editTask(id, { task: todoText, time: getTime() });
